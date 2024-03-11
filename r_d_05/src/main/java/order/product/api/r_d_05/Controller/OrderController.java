@@ -18,4 +18,9 @@ public class OrderController {
     public void save(@RequestBody OrderSaveRequestDto orderSaveRequestDto) {
         orderService.save(orderSaveRequestDto);
     }
+
+    @DeleteMapping
+    public void delete(@RequestParam Long orderID) {
+        orderService.delete(orderID);
+    }
 }
